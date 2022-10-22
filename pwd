@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Password Generator</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "poppins", sans-serif;
+            height: 100vh;
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+            padding: 20px;
+            width: 370px;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: white;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+        
+        .form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        
+        .p-head {
+            position: relative;
+        }
+        
+        .p-head input {
+            width: 100%;
+            height: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .p-head button,
+        .form input[type=number] {
+            padding: 3px 5px;
+            background-color: #eee;
+            outline: none;
+            border: none;
+            border-radius: 3px 0 0 0;
+        }
+        
+        .p-head button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+            padding: 12px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        
+        #sub {
+            display: flex;
+            width: 60%;
+            padding: 12px;
+            margin: 10px auto 0;
+            background-color: #1db3b3c4;
+            justify-content: center;
+            color: azure;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            transition: all .2s;
+        }
+        
+        #sub:hover {
+            background-color: #18e9e9f6;
+            color: black;
+        }
+        
+        #sub:active {
+            background-color: #18e9e9f6;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="p-head">
+            <input type="text" id="password">
+            <button class="copy" id="copypwd">copy</button>
+        </div>
+        <div class="p-body">
+            <div class="form">
+                <label for="p-length">Password Length</label>
+                <input type="number" id="p-length" value="10" min="8" max="25">
+            </div>
+            <div class="form">
+                <label for="p-symbols">Include Symbols</label>
+                <input type="checkbox" id="p-symbol">
+            </div>
+            <div class="form">
+                <label for="p-uppercase">Include Uppercase</label>
+                <input type="checkbox" id="p-uppercase">
+            </div>
+            <div class="form">
+                <label for="p-lowercase">Include Lowercase</label>
+                <input type="checkbox" id="p-lowercase">
+            </div>
+            <div class="form">
+                <label for="p-numbers">Include Numbers</label>
+                <input type="checkbox" id="p-number">
+            </div>
+            <button id="sub">Generate Password</button>
+        </div>
+
+    </div>
+    <script>
+        const empty = "";
+        const symbol = "~!@#$%^&*?";
+        const uCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lCase = "abcdefghijklmnopqrstuvwxyz";
+        const number = "0123456789";
+
+        const pLength = document.getElementById("p-length");
+        const pSymbol = document.getElementById("p-symbol");
+        const pUppercase = document.getElementById("p-uppercase");
+        const pLowercase = document.getElementById("p-lowercase");
+        const pNumber = document.getElementById("p-number");
+        const submit = document.getElementById("sub");
+        const password = document.getElementById("password");
+
+        submit.addEventListener("click", () => {
+            let initialPwd = empty;
+            (pSymbol.checked) ? initialPwd += symbol: "";
+            (pUppercase.checked) ? initialPwd += uCase: "";
+            (pLowercase.checked) ? initialPwd += lCase: "";
+            (pNumber.checked) ? initialPwd += number: "";
+
+            password.value = generatePassword(pLength.value, initialPwd)
+        });
+
+        function generatePassword(p, initialPwd) {
+            let text = "";
+            for (let i = 0; i < p; i++) {
+                text += initialPwd.charAt(Math.floor(Math.random() * initialPwd.length));
+            }
+            return text;
+        }
+
+        const copy = document.getElementById("copypwd");
+
+        copy.addEventListener("click", () => {
+            if (password.value == "") {
+                alert("Please Generate a Password");
+            } else {
+                password.select();
+                document.execCommand("copy");
+                alert("Password has been copied to Clipboard");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
