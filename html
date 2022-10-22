@@ -85,8 +85,8 @@
 body{
     margin: 0;
     font-family: "poppins",sans-serif;
-    background-color: rebeccapurple;
-    color: #eee;
+    background-color: lightseagreen;
+    color: rgb(15, 14, 14);
     display:flex;
     align-items: center;
     min-height: 100vh;
@@ -95,14 +95,16 @@ body{
     width: 400px;
     background-color: rgd(69,17,118);
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    font-size: 20px;
 }
 .pw-header{
     padding: 1rem;
+  
 }
 .pw{
     width: 100%;
     height: 70px;
-    background-color: rebeccapurple;
+    background-color: rgb(153, 51, 51);
     display: flex;
     align-items: center;
     position: relative;
@@ -120,7 +122,7 @@ body{
     padding: 0.25rem 1rem;
     font-family: inherit;
     font-weight: bold;
-    color:#fff;
+    color:rgb(195, 53, 53);
     border: none;
     cursor: pointer;
 }
@@ -131,9 +133,10 @@ body{
 }
 .pw-body{
     padding: 0 1rem 1rem;
+    
 }
 .from-control{
-    color: #eee;
+    color: rgb(17, 15, 15);
     display: flex;
     justify-content: space-between;
     margin: 0.75rem 0;
@@ -160,8 +163,8 @@ body{
                     </div>
                 </div>
                 <div class="pw-body">
-                    <div class="from-control">
-                        <lable for="length">password length</lable>
+                    <div class="from-control" >
+                        <lable for="length" >password length</lable  >
                         <input id="len"value="10"type="number"min="8"max="30">
                     </div>
                     <div class="form-control">
@@ -180,7 +183,7 @@ body{
                     <lable for="upper">contain symbols</lable>
                     <input id="upper"type="checkbox">
             </div>
-            <button class="generate" id="generate">Generate password</button>
+            <button  class="generate" id="generate">Generate password</button>
                 </div>
             </div>
             
