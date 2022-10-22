@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Password Generator</title>
+    <style>
+        body {
+            background-image: url('images/image2.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #40514E;
+            margin: 0px;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            opacity: 0.9;
+        }
+        
+        h1 {
+            margin-top: 0;
+            font-family: 'Sacramento', cursive;
+            font-size: 5rem;
+            margin: 40px auto 0 auto;
+            color: black;
+        }
+        
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: white;
+            opacity: 0.7;
+            font-weight: normal;
+            padding-bottom: 10px;
+        }
+        
+        #btn {
+            background: #11cdd4;
+            background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+            background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+            background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+            background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+            background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+            -webkit-border-radius: 8;
+            -moz-border-radius: 8;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+        
+        #btn:hover {
+            background: #30e3cb;
+            background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+            text-decoration: none;
+        }
+        
+        .result-container {
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            margin: 40px auto 0 auto;
+            align-items: center;
+            position: relative;
+            margin-top: 30px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            padding: 10px 10px;
+            height: 40px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        
+        #hello {
+            margin: 0 auto 0 auto;
+            font-size: 25px;
+        }
+        
+        .demo {
+            margin-bottom: 0px;
+            color: white;
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Auto Generate Key</h1>
+    <h3>By clcking on Generate button you can auto generate your password with special characters, alphabets and numbers including in it.</h3>
+    <button id="btn" onclick="abc()">Generate</button>
+    <div class="result-container">
+        <p id="hello">password</p>
+    </div>
+    <br><br><br><br>
+    <p class="demo">@ Teja.</p>
+
+    <script>
+        let arr1 = ['#', '!', '$', '&', '?', '@', '~', '^', '|'];
+        var text = document.querySelectorAll("p")[0];
+
+        function abc() {
+            var text = "";
+            for (let j = 1; j <= 8; j++) {
+                if (j == 1) {
+                    text += (arr1[Math.floor(Math.random() * arr1.length)]);
+                } else if (j == 2 || j == 7 || j == 5) {
+                    text += (String.fromCharCode(Math.floor(Math.random() * 26) + 65));
+                } else if (j == 3 || j == 8) {
+                    text += (String.fromCharCode(Math.floor(Math.random() * 26) + 97));
+                } else if (j == 4 || j == 6) {
+                    text += (String.fromCharCode(Math.floor(Math.random() * 10) + 48));
+                }
+            }
+            document.querySelectorAll("p")[0].innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>
