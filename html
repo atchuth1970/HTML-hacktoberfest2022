@@ -1,194 +1,201 @@
-
 <html>
   <head>
     <title>login diffently</title>
     <style>
-      body{
-        background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFx5yUHIQo1FmYH4VqRFUU5zYdj7VMP0U2g&usqp=CAU");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         text-align: center;
         text-size-adjust: 50%;
       }
-      p{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         font-size: medium;
       }
-      span{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      span {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         font-size: medium;
       }
-      h2{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      h2 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: large;
         text-align: center;
       }
     </style>
   </head>
-<body><div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <h2 >Login page with social media.</h2>
-      <div class="vl">
-        <span class="vl-innertext">Or Try With These.</span><br><br><br>
-      </div>
+  <body>
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="row">
+          <h2>Login page with social media.</h2>
+          <div class="vl">
+            <span class="vl-innertext">Or Try With These.</span
+            ><br /><br /><br />
+          </div>
 
-      <div class="col">
-        <a href="#" class="fb btn">
-          <i class="fa fa-facebook fa-fw"></i><b> Login with Facebook</b><br>
-        </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i><b> Login with Twitter</b><br>
-        </a>
-        <a href="#" class="google btn">
-          <i class="fa fa-google fa-fw"></i><b> Login with Google+</b><br>
-        </a>
-      </div>
+          <div class="col">
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i><b> Login with Facebook</b
+              ><br />
+            </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i><b> Login with Twitter</b
+              ><br />
+            </a>
+            <a href="#" class="google btn">
+              <i class="fa fa-google fa-fw"></i><b> Login with Google+</b><br />
+            </a>
+          </div>
 
-      <div class="col">
-        <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+          <div class="col">
+            <div class="hide-md-lg">
+              <p>Or sign in manually:</p>
+            </div>
+
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            /><br /><br />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            /><br /><br />
+            <input type="submit" value="Login" />
+          </div>
         </div>
+      </form>
+    </div>
 
-        <input type="text" name="username" placeholder="Username" required><br><br>
-        <input type="password" name="password" placeholder="Password" required><br><br>
-        <input type="submit" value="Login">
+    <div class="bottom-container">
+      <div class="row">
+        <div class="col">
+          <a href="#" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+          <a href="#" class="btn">Forgot password?</a>
+        </div>
       </div>
-
     </div>
-  </form>
-</div>
-
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#"  class="btn">Sign up</a>
-    </div>
-    <div class="col">
-      <a href="#" class="btn">Forgot password?</a>
-    </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta https-equiv="X-UA-Compatible"content="IE=edge">
-        <meta name="veiwport"content="width=device-width,intial-scale=1.0">
-        <title>password GEN..</title>
-        <style>
-        *{
-    box-sizing:border-box;
-}
-body{
-    margin: 0;
-    font-family: "poppins",sans-serif;
-    background-color: lightseagreen;
-    color: rgb(15, 14, 14);
-    display:flex;
-    align-items: center;
-    min-height: 100vh;
-}
-.pw-container{
-    width: 400px;
-    background-color: rgd(69,17,118);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    font-size: 20px;
-}
-.pw-header{
-    padding: 1rem;
-  
-}
-.pw{
-    width: 100%;
-    height: 70px;
-    background-color: rgb(153, 51, 51);
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-.pw button{
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(0,50%);
-    transition: opacity 0.2s ease,transform 0.2s ease;
-    opacity: 0;
-    background-color: rgd(35,5,66);
-    padding: 0.25rem 1rem;
-    font-family: inherit;
-    font-weight: bold;
-    color:rgb(195, 53, 53);
-    border: none;
-    cursor: pointer;
-}
-.pw:hover button{
-    opacity:1;
-    transform: translate(0,-80%);
-
-}
-.pw-body{
-    padding: 0 1rem 1rem;
-    
-}
-.from-control{
-    color: rgb(17, 15, 15);
-    display: flex;
-    justify-content: space-between;
-    margin: 0.75rem 0;
-}
-.generate{
-    display: block;
-    background-color: #ecb602;
-    color: rebeccapurple;
-    font-weight: bold;
-    padding: 1rem;
-    font-size: 1.5rem;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-}
-</style>
-        <body>
-            <div class="pw-container">
-                <div class="pw-header">
-                    <div class="pw">
-                        <span id="pw">password here</span>
-                        <button id="copy">copy</button>
-
-                    </div>
-                </div>
-                <div class="pw-body">
-                    <div class="from-control" >
-                        <lable for="length" >password length</lable  >
-                        <input id="len"value="10"type="number"min="8"max="30">
-                    </div>
-                    <div class="form-control">
-                        <lable for="upper">contain upper case letters</lable>
-                        <input id="upper"type="checkbox">
-                    </div>
-                    <div class="form-control">
-                        <lable for="upper">contain lower case letters</lable>
-                        <input id="upper"type="checkbox">
-                     </div>
-                     <div class="form-control">
-                        <lable for="upper">contain numbers</lable>
-                        <input id="upper"type="checkbox">
-                </div>
-                <div class="form-control">
-                    <lable for="upper">contain symbols</lable>
-                    <input id="upper"type="checkbox">
-            </div>
-            <button  class="generate" id="generate">Generate password</button>
-                </div>
-            </div>
-            
-        </body>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta https-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="veiwport" content="width=device-width,intial-scale=1.0" />
+    <title>password GEN..</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "poppins", sans-serif;
+        background-color: lightseagreen;
+        color: rgb(15, 14, 14);
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .pw-container {
+        width: 400px;
+        background-color: rgd(69, 17, 118);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        font-size: 20px;
+      }
+      .pw-header {
+        padding: 1rem;
+      }
+      .pw {
+        width: 100%;
+        height: 70px;
+        background-color: rgb(153, 51, 51);
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+      .pw button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0, 50%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        opacity: 0;
+        background-color: rgd(35, 5, 66);
+        padding: 0.25rem 1rem;
+        font-family: inherit;
+        font-weight: bold;
+        color: rgb(195, 53, 53);
+        border: none;
+        cursor: pointer;
+      }
+      .pw:hover button {
+        opacity: 1;
+        transform: translate(0, -80%);
+      }
+      .pw-body {
+        padding: 0 1rem 1rem;
+      }
+      .from-control {
+        color: rgb(17, 15, 15);
+        display: flex;
+        justify-content: space-between;
+        margin: 0.75rem 0;
+      }
+      .generate {
+        display: block;
+        background-color: #ecb602;
+        color: rebeccapurple;
+        font-weight: bold;
+        padding: 1rem;
+        font-size: 1.5rem;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+      }
+    </style>
+    <body>
+      <div class="pw-container">
+        <div class="pw-header">
+          <div class="pw">
+            <span id="pw">password here</span>
+            <button id="copy">copy</button>
+          </div>
+        </div>
+        <div class="pw-body">
+          <div class="from-control">
+            <lable for="length">password length</lable>
+            <input id="len" value="10" type="number" min="8" max="30" />
+          </div>
+          <div class="form-control">
+            <lable for="upper">contain upper case letters</lable>
+            <input id="upper" type="checkbox" />
+          </div>
+          <div class="form-control">
+            <lable for="upper">contain lower case letters</lable>
+            <input id="upper" type="checkbox" />
+          </div>
+          <div class="form-control">
+            <lable for="upper">contain numbers</lable>
+            <input id="upper" type="checkbox" />
+          </div>
+          <div class="form-control">
+            <lable for="upper">contain symbols</lable>
+            <input id="upper" type="checkbox" />
+          </div>
+          <button class="generate" id="generate">Generate password</button>
+        </div>
+      </div>
+    </body>
+  </head>
 </html>
-
-
