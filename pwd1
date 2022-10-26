@@ -8,11 +8,11 @@
     <title>Password Generator</title>
     <style>
         body {
-            background-image: url('images/image2.png');
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC1F-1BjSFCpvnNMRqwxkzxssfTXXlDfusmA&usqp=CAU");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            color: #40514E;
+            color: #080d01;
             margin: 0px;
             text-align: center;
             font-family: 'Merriweather', serif;
@@ -21,7 +21,7 @@
         
         h1 {
             margin-top: 0;
-            font-family: 'Sacramento', cursive;
+            font-family: 'lora';
             font-size: 5rem;
             margin: 40px auto 0 auto;
             color: black;
@@ -93,14 +93,14 @@
 </head>
 
 <body>
-    <h1>Auto Generate Key</h1>
+    <h1 >Auto Generate Key</h1>
     <h3>By clcking on Generate button you can auto generate your password with special characters, alphabets and numbers including in it.</h3>
     <button id="btn" onclick="abc()">Generate</button>
     <div class="result-container">
         <p id="hello">password</p>
     </div>
     <br><br><br><br>
-    <p class="demo">@ Teja.</p>
+    <p class="demo">@ vikas.</p>
 
     <script>
         let arr1 = ['#', '!', '$', '&', '?', '@', '~', '^', '|'];
